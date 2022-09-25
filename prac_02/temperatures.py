@@ -1,6 +1,6 @@
 """
 CP1404 - Practical 2
-Pseudocode for temperature conversion
+Program that converts between celsius and fahrenheit
 """
 
 MENU = """C - Convert Celsius to Fahrenheit
