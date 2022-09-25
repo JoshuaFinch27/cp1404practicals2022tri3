@@ -1,5 +1,5 @@
 """
-CP1404 - Practical 1
+CP1404 - Practical 2
 Program that determines score status
 """
 
