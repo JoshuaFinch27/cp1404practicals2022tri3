@@ -3,17 +3,18 @@ CP1404 - Practical 4
 Program that:
 """
 
-
 FILENAME = "subject_data.txt"
 
 
 def main():
+    """Gets data and prints it in a neat format"""
     data = get_data()
-    print(data)
+    display_details_neatly(data)
 
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
+    data = []
     input_file = open(FILENAME)
     for line in input_file:
         print(line)  # See what a line looks like
@@ -23,8 +24,16 @@ def get_data():
         print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
+        data.append(parts)
         print("----------")
     input_file.close()
+    return data
+
+
+def display_details_neatly(data):
+    """Displays data nicely."""
+    for subject_details in data:
+        print(f"{subject_details[0]} is taught by {subject_details[1]:12} and has {subject_details[2]:3} students")
 
 
 main()
