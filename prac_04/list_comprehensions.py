@@ -48,6 +48,7 @@ print(larger_numbers)
 # to create a string (not list) of the last names for those full names longer than 11 characters
 # the result should be: 'Harlem, Hendrix, Lovelace'
 
+
 # Not sure what I need to finish this (other than that I need to use join). :(
 sorted_last_names = [str(name.split()[0][0]) for name in full_names if len(full_names) > 11]
 print(sorted_last_names)
