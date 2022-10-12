@@ -1,6 +1,6 @@
 """
 CP1404 - Practical 4
-Program that:
+Program that: reads data about subjects from a file and prints it neatly
 """
 
 FILENAME = "subject_data.txt"
