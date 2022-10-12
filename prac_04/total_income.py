@@ -3,7 +3,6 @@ CP1404 - Practical 4
 Program that: calculates monthly cumulative totals for income
 """
 
-
 def main():
     """Display income report for incomes over a given number of months."""
     incomes = []
