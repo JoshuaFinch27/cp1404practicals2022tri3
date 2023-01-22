@@ -7,6 +7,7 @@ Program:
 - THEN sort by year (oldest to newest) & display again
 """
 
+import csv
 from prac_06.guitar import Guitar
 
 
@@ -24,6 +25,13 @@ def main():
     for guitar in guitars:
         print(guitar)
     sort_guitars(guitars)
+    add_guitars(guitars)
+
+    with open('guitars.csv', 'w', newline='') as out_file:
+        writer = csv.writer(out_file)
+        for guitar in guitars:
+            writer.writerow(guitar)
+    out_file.close()
 
 
 def sort_guitars(guitars):
@@ -37,6 +45,18 @@ def sort_guitars(guitars):
     for guitar in guitars:
         print(guitar)
         # Couldn't get this, moving on
+
+
+def add_guitars(guitars):
+    """Add guitars to list"""
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        guitar_to_add = Guitar(name, year, cost)
+        guitars.append(guitar_to_add)
+        print(guitar_to_add, "added.")
+        name = input("Name: ")
 
 
 main()
