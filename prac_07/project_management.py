@@ -3,7 +3,8 @@
 actual
 + 20 min
 + 5 min
-+ 15 min
++ 15 min (to 1pm)
+ Need to focus on other pracs/assignment moving on
 """
 
 import datetime
@@ -14,13 +15,14 @@ FILENAME = "projects.txt"
 
 def main():
     """Displays program menu and holds core functions"""
-    load(FILENAME)
+    projects = load_projects()
     display_menu()
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "L":
-            pass
-
+            load_projects()
+        elif choice == "S":
+            save_projects(projects)
 
 
         elif choice == "R":
@@ -47,9 +49,9 @@ def display_menu():
 - (Q)uit""")
 
 
-def load(self, filename=""):
+def load_projects(self):
     """load (from txt file into Project objects in the list)"""
-    in_file = open('projects.txt', "r")
+    in_file = open(FILENAME, "r")
     in_file.readline()
     for line in in_file.readlines():
         print(line)
