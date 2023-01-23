@@ -20,9 +20,9 @@ class Band:
         # return f"{self.name} ({musicians} ({}))"
 
 
-    def add(self):
+    # def add(self):
 
 
-    def play(self):
+    # def play(self):
 
 
